@@ -203,6 +203,9 @@ function extract()
     *.tar.bz2)
       bzip2 -dc $1 | tar $tarflags -
       ;;
+    *.tar.zst)
+      tar $tarflags $1
+      ;;
     *)
       echo "Unhandled archive type" 2>&1
       exit 1

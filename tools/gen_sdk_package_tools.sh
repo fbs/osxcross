@@ -46,6 +46,10 @@ case $SDK_COMPRESSOR in
   "zip")
     SDK_EXT=".zip"
     ;;
+  "zstd")
+    SDK_COMPRESSOR=zstd
+    SDK_EXT=".tar.zst"
+    ;;
   *)
     echo "error: unknown compressor \"$SDK_COMPRESSOR\"" >&2
     exit 1
