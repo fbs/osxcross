@@ -142,11 +142,6 @@ for SDK in $SDKS; do
 
   mkdir -p $TMP/$SDK/usr/include/c++
 
-  # libc++ headers for C++11/C++14
-  if [ -d $LIBCXXDIR ]; then
-    cp -rf $LIBCXXDIR "$TMP/$SDK/usr/include/c++"
-  fi
-
   if [ -d $MANDIR ]; then
     mkdir -p $TMP/$SDK/usr/share/man
     cp -rf $MANDIR/* $TMP/$SDK/usr/share/man
